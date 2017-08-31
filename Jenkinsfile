@@ -24,6 +24,9 @@ node {
         sh 'mvn -B -V -U -e clean package'
     }
 
+        stage('MyStep') {
+        echo 'hello world'
+    }
     stage('Archive') {
         junit allowEmptyResults: true, testResults: '**/target/**/TEST*.xml'
     }
